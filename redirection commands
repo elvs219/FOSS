@@ -1,0 +1,327 @@
+exam1@debian:~$ mkdir elvin
+exam1@debian:~$ cd elvin
+exam1@debian:~/elvin$ nano file1.txt
+exam1@debian:~/elvin$ wc -l <<file1.txt
+> 
+> ^C
+exam1@debian:~/elvin$ wc -l << file1.txt
+
+
+> ^C
+exam1@debian:~/elvin$ wc -l <<file1.txt
+
+> 
+> ^C
+exam1@debian:~/elvin$ wc -l <file1.txt
+1
+exam1@debian:~/elvin$ nano file1
+exam1@debian:~/elvin$ nano file1.txt
+exam1@debian:~/elvin$ wc -l <file1.txt
+3
+exam1@debian:~/elvin$ wc --words < file1.txt
+4
+exam1@debian:~/elvin$ nano file1.txt
+exam1@debian:~/elvin$ ls -l >file1
+exam1@debian:~/elvin$ nano f1
+exam1@debian:~/elvin$ ls -l >f1
+exam1@debian:~/elvin$ ls -l
+total 12
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1  22 Jan 28 13:50 file1.txt
+exam1@debian:~/elvin$ ls -l >>file1.txt
+exam1@debian:~/elvin$ nano file1.txt
+exam1@debian:~/elvin$ ls -l | grep "f1"
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+exam1@debian:~/elvin$ man sort
+exam1@debian:~/elvin$ sort file1.txt
+
+hai earth
+Helo world
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1  22 Jan 28 13:50 file1.txt
+total 12
+exam1@debian:~/elvin$ sort f1
+-rw-r--r-- 1 exam1 exam1   0 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1  22 Jan 28 13:50 file1.txt
+total 8
+exam1@debian:~/elvin$ nano alan
+exam1@debian:~/elvin$ sort alan
+my name is ALAN
+exam1@debian:~/elvin$ nano alan
+exam1@debian:~/elvin$ sort alan
+
+affgb
+my name is ALAN
+exam1@debian:~/elvin$ paste alan
+
+my name is ALAN
+affgb
+exam1@debian:~/elvin$ ps -e
+  PID TTY          TIME CMD
+    1 ?        00:00:00 systemd
+    2 ?        00:00:00 kthreadd
+    3 ?        00:00:00 ksoftirqd/0
+    5 ?        00:00:00 kworker/0:0H
+    7 ?        00:00:00 rcu_sched
+    8 ?        00:00:00 rcu_bh
+    9 ?        00:00:00 migration/0
+   10 ?        00:00:00 lru-add-drain
+   11 ?        00:00:00 watchdog/0
+   12 ?        00:00:00 cpuhp/0
+   13 ?        00:00:00 cpuhp/1
+   14 ?        00:00:00 watchdog/1
+   15 ?        00:00:00 migration/1
+   16 ?        00:00:00 ksoftirqd/1
+   18 ?        00:00:00 kworker/1:0H
+   19 ?        00:00:00 cpuhp/2
+   20 ?        00:00:00 watchdog/2
+   21 ?        00:00:00 migration/2
+   22 ?        00:00:00 ksoftirqd/2
+   24 ?        00:00:00 kworker/2:0H
+   25 ?        00:00:00 cpuhp/3
+   26 ?        00:00:00 watchdog/3
+   27 ?        00:00:00 migration/3
+   28 ?        00:00:00 ksoftirqd/3
+   30 ?        00:00:00 kworker/3:0H
+   31 ?        00:00:00 kdevtmpfs
+   32 ?        00:00:00 netns
+   33 ?        00:00:00 khungtaskd
+   34 ?        00:00:00 oom_reaper
+   35 ?        00:00:00 writeback
+   36 ?        00:00:00 kcompactd0
+   37 ?        00:00:00 kworker/2:1
+   38 ?        00:00:00 ksmd
+   39 ?        00:00:00 khugepaged
+   40 ?        00:00:00 crypto
+   41 ?        00:00:00 kintegrityd
+   42 ?        00:00:00 bioset
+   43 ?        00:00:00 kblockd
+   44 ?        00:00:00 kworker/3:1
+   45 ?        00:00:00 kworker/0:1
+   47 ?        00:00:00 devfreq_wq
+   48 ?        00:00:00 watchdogd
+   49 ?        00:00:00 kswapd0
+   50 ?        00:00:00 vmstat
+   62 ?        00:00:00 kthrotld
+   64 ?        00:00:00 ipv6_addrconf
+   94 ?        00:00:00 acpi_thermal_pm
+   99 ?        00:00:00 ata_sff
+  132 ?        00:00:00 scsi_eh_0
+  133 ?        00:00:00 scsi_tmf_0
+  134 ?        00:00:00 scsi_eh_1
+  135 ?        00:00:00 scsi_tmf_1
+  136 ?        00:00:00 kworker/u8:2
+  137 ?        00:00:00 scsi_eh_2
+  138 ?        00:00:00 scsi_tmf_2
+  139 ?        00:00:00 scsi_eh_3
+  140 ?        00:00:00 scsi_tmf_3
+  141 ?        00:00:00 kworker/u8:3
+  145 ?        00:00:00 bioset
+  147 ?        00:00:00 kworker/0:1H
+  148 ?        00:00:00 kworker/3:1H
+  149 ?        00:00:00 kworker/2:1H
+  151 ?        00:00:00 kworker/1:1H
+  187 ?        00:00:00 jbd2/sda9-8
+  188 ?        00:00:00 ext4-rsv-conver
+  221 ?        00:00:00 systemd-journal
+  223 ?        00:00:00 kworker/3:2
+  225 ?        00:00:00 kauditd
+  247 ?        00:00:00 systemd-udevd
+  274 ?        00:00:00 irq/30-mei_me
+  311 ?        00:00:00 i915/signal:0
+  312 ?        00:00:00 i915/signal:1
+  313 ?        00:00:00 i915/signal:2
+  314 ?        00:00:00 i915/signal:4
+  405 ?        00:00:00 jbd2/sda7-8
+  406 ?        00:00:00 ext4-rsv-conver
+  431 ?        00:00:00 systemd-timesyn
+  449 ?        00:00:00 accounts-daemon
+  450 ?        00:00:00 rtkit-daemon
+  453 ?        00:00:00 systemd-logind
+  454 ?        00:00:00 ModemManager
+  455 ?        00:00:00 rsyslogd
+  456 ?        00:00:00 dbus-daemon
+  480 ?        00:00:00 NetworkManager
+  481 ?        00:00:03 avahi-daemon
+  483 ?        00:00:00 cron
+  492 ?        00:00:00 polkitd
+  500 ?        00:00:00 avahi-daemon
+  523 ?        00:00:00 vsftpd
+  563 ?        00:00:00 gdm3
+  568 ?        00:00:00 gdm-session-wor
+  653 ?        00:00:02 mysqld
+  656 ?        00:00:00 apache2
+  670 ?        00:00:00 apache2
+  671 ?        00:00:00 apache2
+  672 ?        00:00:00 apache2
+  673 ?        00:00:00 apache2
+  674 ?        00:00:00 apache2
+  717 ?        00:00:00 systemd
+  730 ?        00:00:00 (sd-pam)
+  739 tty1     00:00:00 gdm-wayland-ses
+  747 ?        00:00:00 dbus-daemon
+  805 tty1     00:00:00 gnome-session-b
+  817 tty1     00:00:01 gnome-shell
+  821 ?        00:00:00 upowerd
+  839 tty1     00:00:00 Xwayland
+  847 ?        00:00:00 minissdpd
+  910 ?        00:00:00 xinetd
+  995 ?        00:00:00 at-spi-bus-laun
+ 1000 ?        00:00:00 dbus-daemon
+ 1002 ?        00:00:00 at-spi2-registr
+ 1036 ?        00:00:00 master
+ 1038 ?        00:00:00 pulseaudio
+ 1039 ?        00:00:00 pickup
+ 1040 ?        00:00:00 qmgr
+ 1054 tty1     00:00:00 gnome-settings-
+ 1055 ?        00:00:00 packagekitd
+ 1062 ?        00:00:00 wpa_supplicant
+ 1083 ?        00:00:00 colord
+ 1100 ?        00:00:00 gdm-session-wor
+ 1103 ?        00:00:00 systemd
+ 1104 ?        00:00:00 (sd-pam)
+ 1110 ?        00:00:00 gnome-keyring-d
+ 1113 tty2     00:00:00 gdm-x-session
+ 1115 tty2     00:00:03 Xorg
+ 1119 ?        00:00:00 dbus-daemon
+ 1121 tty2     00:00:00 gnome-session-b
+ 1176 ?        00:00:00 ssh-agent
+ 1183 ?        00:00:00 at-spi-bus-laun
+ 1188 ?        00:00:00 dbus-daemon
+ 1190 ?        00:00:00 at-spi2-registr
+ 1205 tty2     00:00:07 gnome-shell
+ 1208 ?        00:00:00 gvfsd
+ 1213 ?        00:00:00 gvfsd-fuse
+ 1226 ?        00:00:00 pulseaudio
+ 1239 ?        00:00:00 gnome-shell-cal
+ 1250 ?        00:00:00 evolution-sourc
+ 1251 ?        00:00:00 mission-control
+ 1259 ?        00:00:00 gvfs-udisks2-vo
+ 1262 ?        00:00:00 udisksd
+ 1269 ?        00:00:00 gvfs-mtp-volume
+ 1273 ?        00:00:00 gvfs-afc-volume
+ 1276 ?        00:00:00 goa-daemon
+ 1281 ?        00:00:00 gvfs-goa-volume
+ 1293 ?        00:00:00 goa-identity-se
+ 1298 ?        00:00:00 gvfs-gphoto2-vo
+ 1302 tty2     00:00:00 gnome-settings-
+ 1318 ?        00:00:00 evolution-calen
+ 1323 tty2     00:00:00 gnome-software
+ 1324 tty2     00:00:00 tracker-miner-a
+ 1328 ?        00:00:00 tracker-store
+ 1332 tty2     00:00:00 tracker-extract
+ 1333 tty2     00:00:00 evolution-alarm
+ 1335 tty2     00:00:00 gsd-printer
+ 1347 tty2     00:00:00 tracker-miner-f
+ 1350 tty2     00:00:00 tracker-miner-u
+ 1376 ?        00:00:00 evolution-calen
+ 1386 ?        00:00:00 dconf-service
+ 1392 ?        00:00:00 evolution-calen
+ 1402 ?        00:00:00 evolution-addre
+ 1428 ?        00:00:00 evolution-addre
+ 1496 ?        00:00:02 gnome-terminal-
+ 1566 ?        00:00:00 gvfsd-trash
+ 1602 pts/0    00:00:00 bash
+ 1620 ?        00:00:00 gvfsd-burn
+ 1632 ?        00:00:00 gvfsd-metadata
+ 1663 ?        00:00:00 kworker/0:0
+ 1674 ?        00:00:00 kworker/1:1
+ 1684 ?        00:00:00 kworker/2:0
+ 1738 ?        00:00:00 kworker/1:0
+ 1767 ?        00:00:00 kworker/0:2
+ 1769 pts/0    00:00:00 ps
+exam1@debian:~/elvin$ ps -c
+  PID CLS PRI TTY          TIME CMD
+ 1602 TS   19 pts/0    00:00:00 bash
+ 1771 TS   19 pts/0    00:00:00 ps
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ cat friuts
+cat: friuts: No such file or directory
+exam1@debian:~/elvin$ cat fruits
+apple
+banana
+orange
+mango
+grapes
+berry
+strawberry
+kiwi
+
+exam1@debian:~/elvin$ cut -b 1 fruits
+a
+b
+o
+m
+g
+b
+s
+k
+
+exam1@debian:~/elvin$ cut -b 1,3,5 fruits
+ape
+bnn
+oag
+mno
+gae
+bry
+srw
+kw
+
+exam1@debian:~/elvin$ ls -l
+total 20
+-rw-r--r-- 1 exam1 exam1  23 Jan 28 14:15 alan
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1 176 Jan 28 14:00 file1.txt
+-rw-r--r-- 1 exam1 exam1  56 Jan 28 14:25 fruits
+exam1@debian:~/elvin$ chmod 000 fruits
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ chmod 400 fruits
+exam1@debian:~/elvin$ ls -l
+total 20
+-rw-r--r-- 1 exam1 exam1  23 Jan 28 14:15 alan
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1 176 Jan 28 14:00 file1.txt
+-r-------- 1 exam1 exam1  56 Jan 28 14:25 fruits
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ 
+exam1@debian:~/elvin$ chmod u-r fruits
+exam1@debian:~/elvin$ nano fruits
+exam1@debian:~/elvin$ ls -l
+total 24
+-rw-r--r-- 1 exam1 exam1  23 Jan 28 14:15 alan
+-rw-r--r-- 1 exam1 exam1 153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1 106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1 176 Jan 28 14:00 file1.txt
+---------- 1 exam1 exam1  56 Jan 28 14:25 fruits
+-rw-r--r-- 1 exam1 exam1  60 Jan 28 14:34 fruitsy
+exam1@debian:~/elvin$ nano file.c
+exam1@debian:~/elvin$ gedit file.c
+
+^C
+exam1@debian:~/elvin$ gcc file.c
+exam1@debian:~/elvin$ chmod 000 file.c
+exam1@debian:~/elvin$ gcc file.c
+cc1: fatal error: file.c: Permission denied
+compilation terminated.
+exam1@debian:~/elvin$ man chmod
+exam1@debian:~/elvin$ ls-l
+bash: ls-l: command not found
+exam1@debian:~/elvin$ ls -l
+total 40
+-rw-r--r-- 1 exam1 exam1   23 Jan 28 14:15 alan
+-rwxr-xr-x 1 exam1 exam1 8640 Jan 28 14:42 a.out
+-rw-r--r-- 1 exam1 exam1  153 Jan 28 13:59 f1
+-rw-r--r-- 1 exam1 exam1  106 Jan 28 13:57 file1
+-rw-r--r-- 1 exam1 exam1  176 Jan 28 14:00 file1.txt
+---------- 1 exam1 exam1   57 Jan 28 14:41 file.c
+---------- 1 exam1 exam1   56 Jan 28 14:25 fruits
+-rw-r--r-- 1 exam1 exam1   60 Jan 28 14:34 fruitsy
+exam1@debian:~/elvin$ ^C
+exam1@debian:~/elvin$ 
