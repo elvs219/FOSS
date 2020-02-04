@@ -1,0 +1,18 @@
+
+echo $USER           	#logged user
+
+echo $(logname)      	#logged name
+
+echo $SHELL		#your current shell
+
+echo $HOME		#home directory
+
+echo $OSTYPE		#Operating System type
+
+echo $PATH		#Current path setting
+
+echo $PWD		#Current Working directory
+
+echo $(arch)		#OS architecure
+
+echo $(who --count)	#logged no. of users
