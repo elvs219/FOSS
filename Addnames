@@ -1,0 +1,35 @@
+echo "There are $# arguments specified at the command line."
+echo
+if test $# -eq "2"  
+then
+	echo Correct Number of Arguments
+else
+	echo Incorrect Number of Arguments
+fi
+
+echo
+
+if(("$#<2"))
+then
+	echo missing argument
+exit 1
+fi
+
+if test -e "$1"
+then
+	echo File exists
+else
+	echo File does not exist
+fi
+
+echo 
+
+c=$(grep "$2" classlist.txt | wc -l)
+
+if((c>=1))
+then
+	echo this username exist
+else
+	echo $2>>$1
+	echo $2 has been written into the File $1
+fi
